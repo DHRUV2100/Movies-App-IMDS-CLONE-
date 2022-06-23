@@ -14,7 +14,7 @@ export class MovieList extends Component {
       parr: [1],
       movies: [],
       currPage: 1,
-      favourites : []
+      favourites: []
     };
   }
 
@@ -63,46 +63,46 @@ export class MovieList extends Component {
   };
 
 
-  handlePrevious =()=>{
-      if(this.state.currPage!=1){
-        this.setState({
-          currPage : this.state.currPage-1
-        } , this.changeMovies)
-      }
+  handlePrevious = () => {
+    if (this.state.currPage != 1) {
+      this.setState({
+        currPage: this.state.currPage - 1
+      }, this.changeMovies)
+    }
   }
 
 
-  handlePageClick =(value)=>{
-       if(value!=this.state.currPage){
-         this.setState({
-           currPage : value
-         } , this.changeMovies)
-       }
+  handlePageClick = (value) => {
+    if (value != this.state.currPage) {
+      this.setState({
+        currPage: value
+      }, this.changeMovies)
+    }
   }
 
-  handleFavourites=(movieObj)=>{
-      let oldData = JSON.parse(localStorage.getItem('movies-app') || '[]')
-
-      if(this.state.favourites.includes(movieObj.id)){
-                oldData = oldData.filter((movie)=> movie.id != movieObj.id)
-      }
-
-      else{
-        oldData.push(movieObj)
-      }
-
-      localStorage.setItem("movies-app" , JSON.stringify(oldData))
-      console.log(oldData)
-
-      this.handleFavouritesState()
-  }
-
-  handleFavouritesState =()=>{
+  handleFavourites = (movieObj) => {
     let oldData = JSON.parse(localStorage.getItem('movies-app') || '[]')
-    let temp = oldData.map((movie)=>movie.id)
+
+    if (this.state.favourites.includes(movieObj.id)) {
+      oldData = oldData.filter((movie) => movie.id != movieObj.id)
+    }
+
+    else {
+      oldData.push(movieObj)
+    }
+
+    localStorage.setItem("movies-app", JSON.stringify(oldData))
+    console.log(oldData)
+
+    this.handleFavouritesState()
+  }
+
+  handleFavouritesState = () => {
+    let oldData = JSON.parse(localStorage.getItem('movies-app') || '[]')
+    let temp = oldData.map((movie) => movie.id)
 
     this.setState({
-      favourites : [...temp]
+      favourites: [...temp]
     })
 
 
@@ -114,8 +114,8 @@ export class MovieList extends Component {
     return (
       <>
         <div>
-          <h3 className="text-center">
-            <strong>Trending</strong>
+          <h3 className="text-center" style={{ color: "#EEEEEE", fontFamily: "Courier New, monospace", color: "#DDDDDD", fontSize: "3rem", WebkitTextStroke: " 1px #892CDC" }}>
+            <strong>TRENDING</strong>
           </h3>
         </div>
 
@@ -128,7 +128,7 @@ export class MovieList extends Component {
             >
               <img
                 src={`https://image.tmdb.org/t/p/original${movieElem.backdrop_path}`}
-                style={{ height: "40vh", width: "20vw" }}
+                style={{ height: "40vh", width: "19.6vw" }}
                 className="card-img-top movie-img"
                 alt="..."
               />
@@ -139,15 +139,13 @@ export class MovieList extends Component {
                 className="button-wrapper"
                 style={{ display: "flex", justifyContent: "center" }}
               >
-                {this.state.hover == movieElem.id && 
+                {this.state.hover == movieElem.id &&
                   <a
                     className="btn btn-primary movies-button text-center"
-                    onClick={()=> this.handleFavourites(movieElem)}
+                    onClick={() => this.handleFavourites(movieElem)}
+                    >
+                    {this.state.favourites.includes(movieElem.id) ? "Remove from Favorites" : 'Add to Favourites'}
 
-                  
-                  >
-                    {this.state.favourites.includes(movieElem.id)? "Remove from Favorites" : 'Add to Favourites'} 
-                  
                   </a>
                 }
               </div>
@@ -165,7 +163,7 @@ export class MovieList extends Component {
 
               {this.state.parr.map((value) => (
                 <li class="page-item">
-                  <a class="page-link" onClick={()=> this.handlePageClick(value)}>
+                  <a class="page-link" onClick={() => this.handlePageClick(value)}>
                     {value}
                   </a>
                 </li>

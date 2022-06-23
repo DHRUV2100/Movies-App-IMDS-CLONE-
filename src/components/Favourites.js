@@ -153,7 +153,7 @@ sortRatingAsc=()=>{
                 this.state.currgenre == genre ? (
                   <li
                     style={{
-                      background: "#3f51b5",
+                      background: "#8E05C2",
                       color: "white",
                       fontWeight: "bold",
                     }}
@@ -181,19 +181,19 @@ sortRatingAsc=()=>{
               <input type="number" className="input-group-text col" />
             </div>
 
-            <div className="row">
+            <div className="row" >
               <table class="table">
                 <thead>
                   <tr>
                     <th></th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Genre</th>
-                    <th scope="col"><i class="fa-solid fa-sort-up" onClick={this.sortPopularityDesc}></i>Popularity<i class="fa-solid fa-sort-down" onClick={this.sortPopularityAsc}></i></th>
-                    <th scope="col"><i class="fa-solid fa-sort-up" onClick={this.sortRatingDesc}></i>Ratings<i class="fa-solid fa-sort-down" onClick={this.sortRatingAsc}></i></th>
+                    <th scope="col" style={{color:"white"}}>Title</th>
+                    <th scope="col" style={{color:"white"}}>Genre</th>
+                    <th scope="col" style={{color:"white"}}><i class="fa-solid fa-sort-up" onClick={this.sortPopularityDesc}></i>Popularity<i class="fa-solid fa-sort-down" onClick={this.sortPopularityAsc}></i></th>
+                    <th scope="col" style={{color:"white"}}><i class="fa-solid fa-sort-up" onClick={this.sortRatingDesc}></i>Ratings<i class="fa-solid fa-sort-down" onClick={this.sortRatingAsc}></i></th>
                     <th></th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody style={{color:"white"}}>
                   {filterArr.map((movieElem) => (
                     <tr>
                       <td>

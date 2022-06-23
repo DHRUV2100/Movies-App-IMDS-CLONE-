@@ -38,28 +38,41 @@
 }
 
 
-
+body{
+  background-color: #000000;
+}
+.appName{
+  color: #8E05C2;
+  /* margin-left: 1rem; */
+  /* margin-top: 1rem; */
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
 .banner-card{
-  width: 100vw;
+  width: 98.7vw;
   margin-top: 2vh ;
   margin-bottom: 3vh;
   position: relative;
-  height: 70vh ;
+  height: 61.3vh ;
+  border: 0.3rem solid #700B97;
+  border-radius: 0.5rem;
 }
 
 .banner-img{
-  height: 70vh;
+  height: 60vh;
   width: 100%;
 }
 
 
 .banner-title{
   position: absolute;
-
-  top : 45vh;
-  left : 5vw;
+  background-color: #BC6FF1;
+  top : 34vh;
+  left : 2vw;
   font-size: 45px;
-  
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  outline:0.1rem solid white;
   color:white;
 }
 
@@ -67,11 +80,21 @@
 .banner-text{
   position:absolute;
   color: white;
-  top:55vh;
-  height: 4.5rem;
-  margin-left: 5vw;
+  top:47vh;
+  left: 2vw;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.7rem;
+  font-size: 1rem;
+  /* margin-left: 5vw; */
+  border-radius: 0.4rem;
+  outline:0.1rem solid white;
+  width: 90vw;
+  /* display: hidden; */
+}
 
-
+.banner-text:hover{
+  background-color: #BC6FF1;
+  display: flex;
 }
 
 
@@ -88,20 +111,28 @@
   width: 20vw;
   color: white;
   position: relative;
+  border: 0.2rem solid #8E05C2;
 
 }
 
 
 .movie-title{
   position : absolute;
-  top : 1rem;
-  left : 1rem;
+  top : 15rem;
+  left : 0.8rem;
+  color: WHITE;
+  font-weight: 700;
+  /* font-size: 1.2rem; */
+  -webkit-text-stroke: 1px #8E05C2;
+  /* -webkit-text-stroke: white; */
+
 }
 
 .movies-button{
   position : absolute;
-  bottom : 2rem;
- 
+  top: 0rem;
+  right:0
+  /* background-color: black; */
  
 
 }
@@ -113,4 +144,7 @@
 
 .favourites-table{
   padding: 3rem;
+  background-color: #8E05C2;
+  border-radius: 1rem;
+  margin-top: 2rem;
 }

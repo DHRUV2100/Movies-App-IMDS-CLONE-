@@ -128,7 +128,7 @@ export const movies = {
            original_language: "en",
            original_title: "Jungle Cruise",
            overview:
-             "Dr. Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal – a discovery that will change the future of medicine.",
+             "Dr Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal – a discovery that will change the future of medicine.",
            popularity: 2422.668,
            poster_path: "/9dKCd55IuTT5QRs989m9Qlb7d2B.jpg",
            release_date: "2021-07-28",

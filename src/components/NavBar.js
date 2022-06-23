@@ -6,8 +6,8 @@ export class NavBar extends Component {
   render() {
     return (
       <div style={{display:'flex'}}>
-          <Link to='/' style={{textDecoration : 'none'}} ><h1>Movies App</h1></Link>
-          <Link to='/favourites' style={{textDecoration : 'none'}}><h2 style={{marginLeft: '2rem' , marginTop:'0.7rem'}}>Favourites</h2></Link>
+          <Link to='/' style={{textDecoration : 'none'}} ><h1 className='appName'>Movies App</h1></Link>
+          <Link to='/favourites' style={{textDecoration : 'none'}}><h2 className='appName' style={{marginLeft: '2rem' , marginTop:'0.7rem'}}>Favourites</h2></Link>
              
              
       </div>
